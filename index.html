@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images\logo.svg" alt="">
+    </div>
+  </header>
+
+  <main class="main-conteiner">
+    <div class="left-menu">
+      <div class="input">
+        <label for="bill" class="text-label">Bill</label>
+        <div class="input-conteiner">
+          <img class="icon" src="images\icon-dollar.svg" alt="">
+          <input type="text" name="bill" class="text-input" placeholder="0" maxlength="7">
+        </div>
+
+      </div>
+      <div class="input">
+        <label for="radio" class="text-label">Select Tip %</label>
+        <div class="radio-cont">
+
+          <!-- Radio button 1 -->
+          <label class="radio-container">
+            <input type="radio" name="option" value="0.05">
+            <div class="radio-button">
+              <span class="radio-label">5%</span>
+            </div>
+          </label>
+
+          <!-- Radio button 2 -->
+          <label class="radio-container">
+            <input type="radio" name="option" value="0.1">
+            <div class="radio-button">
+              <span class="radio-label">10%</span>
+            </div>
+          </label>
+
+          <!-- Radio button 3 -->
+          <label class="radio-container">
+            <input type="radio" name="option" value="0.15">
+            <div class="radio-button">
+              <span class="radio-label">15%</span>
+            </div>
+          </label>
+          <!-- Radio button 4 -->
+          <label class="radio-container">
+            <input type="radio" name="option" value="0.25">
+            <div class="radio-button">
+              <span class="radio-label">25%</span>
+            </div>
+          </label>
+          <!-- Radio button 5 -->
+          <label class="radio-container">
+            <input type="radio" name="option" value="0.5">
+            <div class="radio-button">
+              <span class="radio-label">50%</span>
+            </div>
+          </label>
+          <!-- custom button -->
+          <div class="radio-custom">
+            <input type="text" class="custom" name="custom" placeholder="Custom" maxlength="3">
+          </div>
+
+        </div>
+      </div>
+      <div class="input">
+        <div class="bottom-input-texts">
+          <label for="number" class="text-label">Number of people</label>
+          <span id="warning">Can't be zero</span>
+        </div>
+        <div class="input-conteiner">
+          <img class="icon" src="images\icon-person.svg" alt="">
+          <input type="text" name="number" class="text-input" placeholder="0">
+        </div>
+      </div>
+
+    </div>
+    <div class="right-menu">
+      <div class="output">
+        <div class="data">
+          <p>
+            Tip Amount <br />
+            <span>/ person</span>
+          </p>
+          <div class="tipValue" id="tipamount">$0.00</div>
+        </div>
+        <div class="data">
+          <p>
+            Total <br />
+            <span>/ person</span>
+          </p>
+          <div class="tipValue" id="total">$0.00</div>
+        </div>
+      </div>
+      <div class="reset-div">
+        <button disabled class="reset">RESET</button>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="calc.js"></script>
+</body>
+
+</html>
